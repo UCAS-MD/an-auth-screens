@@ -36,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
                 String mobileNumber = mMobileNumberEditText.getText().toString().trim();
 
                 Intent intent = new Intent(MainActivity.this, loginScreen.class);
+                intent.putExtra("username", username);
+                intent.putExtra("email", email);
+                intent.putExtra("password", password);
+                intent.putExtra("mobileNumber", mobileNumber);
                 startActivity(intent);
                 finish();
             }
